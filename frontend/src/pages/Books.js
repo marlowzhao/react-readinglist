@@ -29,20 +29,28 @@ export default function Books(){
   }
 
   return (
-    <div>
-      <h2>
-        hi see all books
-      </h2>
-     <button><Link to="/create">Create New Book</Link></button>
-      <div className="bookpage">
+    <div className="books-pg">
+      <div className="books-pg-up">
+        <h2 className="books-pg-ttl">My Reading List</h2>
+        <p className="books-pg-sub-ttl">Add, Edit and Delete Your Books</p>
+        <button className="book-new-crt"><Link to="/create">Create New Book</Link></button>
+      </div>
+
+      <div className="books-pg-btm">
       {books.map(book=>(
         <div className="book" key={book.id}>
-          <h2>{book.tittle}</h2>
-          <h3>{book.author}</h3>
+          <div className="book-img">
+            <img src={book.cover} alt="pic" />
+          </div>
+
+          <div className="book-txt">
+          <p>{book.title} / {book.author}</p>
+          <p>My Review:</p>
           <p>{book.review}</p>
-          {book.cover && <img src={book.cover} alt="" />}
-          <button><Link to="/edit">Edit Info</Link></button>
-          <button onClick={()=>handleDelete(book.id)}>Delete</button>
+
+          <button className="book-edit"><Link to="/edit">Edit</Link></button>
+          <button className="book-delete" onClick={()=>handleDelete(book.id)}>Delete</button>
+          </div>
         </div>
       ))}
       </div>

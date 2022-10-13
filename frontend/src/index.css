@@ -1,3 +1,11 @@
+:root{
+  --orange: #ED7E2A;
+  --red: #B6453E;
+  --lightblue:#EBF4FB;
+  --middleblue:#AFCDFB;
+  --wood:#FDECDD;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +18,58 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* books page */
+
+.books-pg{
+  height: 100%;
+  width:70%;
+  margin:auto;
+  background-color: var(--lightblue);
+}
+
+.books-pg-up{
+  padding: 15px;
+}
+
+
+.books-pg-ttl,
+.books-pg-sub-ttl{
+  color:var(--red)
+}
+
+.book{
+  max-width: 700px;
+  height:240px;
+  border:5px solid var(--middleblue);
+  margin: 16px;
+  border-radius:5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.book-img{
+  height:200px;
+  width: 160px;
+  margin-top: 16px;
+  margin-left: 16px;
+  border-radius: 15px;
+  background-color: var(--wood);
+}
+
+.book-txt{
+  padding:16px;
+  margin-left:10px;
+  width: 100%;
+  color:var(--orange)
+}
+
+.book-edit,
+.book-delete{
+  text-decoration: none;
+  border-style: none;
+  background-color: var(--lightblue);
+  color: var(--red);
 }
